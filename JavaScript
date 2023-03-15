@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Scroll Header Example</title>
+    <style>
+      / header styles with active class /
+      .header.active {
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>My page Hamza </h1>
+    </header>
+    
+    <div class="content">
+      <!-- this is where the rest of the page content goes -->
+    </div>
+    
+    <script>
+      window.addEventListener('scroll', function() {
+        var header = document.querySelector('.header');
+        var scrollPosition = window.scrollY;
+        
+        if (scrollPosition > 100) {
+          header.classList.add('active');
+        } else {
+          header.classList.remove('active');
+        }
+      });
+    </script>
+  </body>
+</html>
+
